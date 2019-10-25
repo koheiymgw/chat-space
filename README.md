@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
-## usersテーブル
+## usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -31,12 +31,12 @@ Things you may want to cover:
 |email|text|null: false, unique: true|
 |password|text|null: false, unique: true|
 
-### Association
-- has_many :messeges
-- has_many :groups, through: :groups_users
+### Association
+- has_many :messeges
+- has_many :groups, through: :groups_users
 
 
-## messegesテーブル
+## messegesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -45,30 +45,30 @@ Things you may want to cover:
 |group_id|integer|null: false|
 |user_id|integer|null: false|
 
-### Association
-- belongs_to :user
-- belongs_to :group
+### Association
+- belongs_to :user
+- belongs_to :group
 
 
-## groupsテーブル
+## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|text|null: false|
 
-### Association
-- has_many :users, through: :groups_users
-- has_many :messeges
+### Association
+- has_many :users, through: :groups_users
+- has_many :messeges
 
 
-## groups_usersテーブル
+## groups_usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
-### Association
-- belongs_to :group
-- belongs_to :user
-- has_many :messeges
+### Association
+- belongs_to :group
+- belongs_to :user
+- has_many :messeges
