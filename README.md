@@ -32,8 +32,8 @@ Things you may want to cover:
 |password|text|null: false, unique: true|
 
 ### Association
-* has_many :messeges
-* has_many :groups, through: :groups_users
+- has_many :messeges
+- has_many :groups, through: :groups_users
 
 
 ## messegesテーブル
@@ -46,8 +46,8 @@ Things you may want to cover:
 |user_id|integer|null: false|
 
 ### Association
-* belongs_to :user
-* belongs_to :group
+- belongs_to :user
+- belongs_to :group
 
 
 ## groupsテーブル
@@ -57,8 +57,8 @@ Things you may want to cover:
 |name|text|null: false|
 
 ### Association
-* has_many :users, through: :groups_users
-* has_many :messeges
+- has_many :users, through: :groups_users
+- has_many :messeges
 
 
 ## groups_usersテーブル
@@ -69,6 +69,6 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-* belongs_to :group
-* belongs_to :user
-* has_many :messeges
+- belongs_to :group
+- belongs_to :user
+- has_many :messeges
