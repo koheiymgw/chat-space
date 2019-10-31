@@ -20,69 +20,7 @@
           = link_to edit_group_path(current_user) do
             Edit
     .messages
-      .message
-        .upper-message
-          .upper-message__user-name
-            メンバー
-          .upper-message__date
-            2019/10/01
-        .lower-message
-          .lower-message__content
-            メッセージ
-      .message
-        .upper-message
-          .upper-message__user-name
-            メンバー
-          .upper-message__date
-            2019/10/02
-        .lower-message
-          .lower-message__content
-            メッセージ
-      .message
-        .upper-message
-          .upper-message__user-name
-            メンバー
-          .upper-message__date
-            2019/10/03
-        .lower-message
-          .lower-message__content
-            メッセージ
-      .message
-        .upper-message
-          .upper-message__user-name
-            メンバー
-          .upper-message__date
-            2019/10/03
-        .lower-message
-          .lower-message__content
-            メッセージ
-      .message
-        .upper-message
-          .upper-message__user-name
-            メンバー
-          .upper-message__date
-            2019/10/03
-        .lower-message
-          .lower-message__content
-            メッセージ
-      .message
-        .upper-message
-          .upper-message__user-name
-            メンバー
-          .upper-message__date
-            2019/10/03
-        .lower-message
-          .lower-message__content
-            メッセージ
-      .message
-        .upper-message
-          .upper-message__user-name
-            メンバー
-          .upper-message__date
-            2019/10/03
-        .lower-message
-          .lower-message__content
-            メッセージ
+      = render @messages
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :body, class: 'form__message', placeholder: 'type a message'
