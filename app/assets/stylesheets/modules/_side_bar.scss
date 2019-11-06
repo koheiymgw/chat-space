@@ -14,7 +14,7 @@
       font-weight: bold;
     }
     &__lists {
-      display: inline-block;
+      display: flex;
       float: right;
       .list {
         display: inline-block;
@@ -29,7 +29,9 @@
   .groups {
     background-color: $side_blue_light;
     height: calc(100vh - 100px);
+    // width: 100%;
     padding: 0 20px;
+    overflow: scroll;
     .group {
       box-sizing: border-box;
       padding: 20px 0 40px;
