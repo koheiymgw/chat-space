@@ -62,8 +62,10 @@ $(document).on('turbolinks:load', function() {
         messages.forEach(function (message) {
           insertHTML = buildHTML(message);
           $('.messages').append(insertHTML);
+          if (message.id > last_message_id){
+            $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+          }
         })
-        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       })
       .fail(function() {
         alert('通信に失敗しました');
