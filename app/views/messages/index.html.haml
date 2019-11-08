@@ -13,7 +13,7 @@
             - @group.group_users.each do |group_user|
               = group_user.user.name
       .right-header
-        = link_to 'Edit', edit_group_path(@group.id), class:"right-header__button"
+        = link_to 'Edit', edit_group_path(@group.id), class:"right-header__button", data: {"turbolinks" => false}
     .messages
       = render @messages
     .form
